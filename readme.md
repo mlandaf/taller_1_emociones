@@ -10,7 +10,7 @@
 
 Materiales del Taller 1 del curso, centrado en el diseño e implementación de una tarea de categorización de expresiones emocionales en PsychoPy Builder.
 
-La tarea es una adaptación del Experimento 1 de Calvo & Lundqvist (2008) utilizando el **Ulima Emotional Faces Dataset**, un dataset de expresiones emocionales en rostros latinos desarrollado en la Universidad de Lima (Suni Lopez et al., 2024-2025).
+La tarea es una adaptación del Experimento 1 de Calvo & Lundqvist (2008) utilizando el **Ulima Emotional Faces Dataset**, un dataset de expresiones emocionales en rostros latinos desarrollado en la Universidad de Lima.
 
 > **Nota:** El archivo `.psyexp` será completado durante el taller. Al finalizar la semana se subirá la versión resuelta a este repositorio.
 
@@ -37,10 +37,6 @@ taller_1_emociones/
 ├── conditions/
 │   ├── condiciones_experimental.xlsx   # 40 trials — fase experimental
 │   └── condiciones_practica.xlsx       # 12 trials — fase de práctica con palabras
-│
-├── docs/
-│   ├── instrucciones_categorizacion_emocional.docx # Docx con las instrucciones de la tarea
-│   └── guia_materiales_taller1.docx # Docx con la guia de los materiales del taller 1
 │
 ├── media/
 │   ├── anger/        # Fotografías de ira      (anger_01.png … anger_40.png)
@@ -70,12 +66,34 @@ taller_1_emociones/
 
 ### Flujo de la tarea
 
-```
-instrucciones → inicio_practica
-→ [loop_practica: practica + feedback_practica]
-→ fin_practica → descanso (60 s) → inicio_experimental
-→ [loop_experimental: experimental + ITI]
-→ fin_experimento
+```mermaid
+flowchart TD
+    A[instrucciones] --> B[instrucciones_practica]
+    B --> LP
+    subgraph LP[loop_practica × 12]
+        P[practica] --> FP[feedback_practica]
+    end
+    LP --> C[fin_practica]
+    C --> D[descanso 60 s]
+    D --> E[instrucciones_experimental]
+    E --> LE
+    subgraph LE[loop_experimental × 40]
+        EX[experimental] --> ITI[ITI]
+    end
+    LE --> F[fin_experimento]
+
+    style A  fill:#D3D1C7,stroke:#5F5E5A,color:#2C2C2A
+    style C  fill:#D3D1C7,stroke:#5F5E5A,color:#2C2C2A
+    style F  fill:#D3D1C7,stroke:#5F5E5A,color:#2C2C2A
+    style D  fill:#FAC775,stroke:#BA7517,color:#412402
+    style B  fill:#AFA9EC,stroke:#534AB7,color:#26215C
+    style LP fill:#EEEDFE,stroke:#534AB7,color:#26215C
+    style P  fill:#AFA9EC,stroke:#534AB7,color:#26215C
+    style FP fill:#AFA9EC,stroke:#534AB7,color:#26215C
+    style E  fill:#5DCAA5,stroke:#0F6E56,color:#04342C
+    style LE fill:#E1F5EE,stroke:#0F6E56,color:#04342C
+    style EX fill:#5DCAA5,stroke:#0F6E56,color:#04342C
+    style ITI fill:#5DCAA5,stroke:#0F6E56,color:#04342C
 ```
 
 ---
