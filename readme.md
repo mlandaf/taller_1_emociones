@@ -121,7 +121,7 @@ flowchart TD
 
 Una vez completada la tarea, el CSV generado por PsychoPy puede procesarse en la aplicación web del curso:
 
-**🔗 [marcelolanda.github.io/emotion-task-results](https://marcelolanda.github.io/emotion-task-results)**
+**🔗 [mlandaf.github.io/taller_1_resultados](https://mlandaf.github.io/taller_1_resultados)**
 
 No se requiere instalar ningún software adicional. Solo arrastra tu archivo CSV al navegador.
 
