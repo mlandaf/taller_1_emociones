@@ -60,7 +60,7 @@ taller_1_emociones/
 | Presentación del estímulo | Free-viewing (hasta respuesta del participante) |
 | ITI | 500 ms |
 | Feedback | Solo en fase de práctica |
-| Variables dependientes | Precisión (% correcto) y tiempo de reacción (ms) |
+| Variables de la tarea | Precisión (% correcto) y tiempo de reacción (ms) |
 
 ### Flujo de la tarea
 
