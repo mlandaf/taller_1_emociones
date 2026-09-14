@@ -1,7 +1,7 @@
 # Taller 1 — Categorización de Expresiones Emocionales
 
 - **Asignatura:** Investigación e Intervención desde las Neurociencias Aplicadas  
-- **Ciclo:** 2026-1  
+- **Ciclo:** 2026-2
 - **Autor:** Marcelo Landa
 
 ---
@@ -37,10 +37,10 @@ taller_1_emociones/
 │   └── condiciones_practica.xlsx       # 12 trials — fase de práctica con palabras
 │
 ├── media/
-│   ├── anger/        # Fotografías de ira      (anger_01.png … anger_40.png)
-│   ├── fear/         # Fotografías de miedo    (fear_01.png … fear_40.png)
-│   ├── happiness/    # Fotografías de alegría  (happiness_01.png … happiness_40.png)
-│   ├── sadness/      # Fotografías de tristeza (sadness_01.png … sadness_40.png)
+│   ├── anger/        # Fotografías de ira      (anger_01.png … anger_10.png)
+│   ├── fear/         # Fotografías de miedo    (fear_01.png … fear_10.png)
+│   ├── happiness/    # Fotografías de alegría  (happiness_01.png … happiness_10.png)
+│   ├── sadness/      # Fotografías de tristeza (sadness_01.png … sadness_10.png)
 │   └── practice/     # Estímulos de la fase de práctica
 │
 └── README.md
@@ -57,6 +57,7 @@ taller_1_emociones/
 | Teclas de respuesta | F (alegría) · G (tristeza) · H (ira) · J (miedo) |
 | Trials de práctica | 12 (palabras escritas, 3 por emoción) |
 | Trials experimentales | 40 (10 por emoción) |
+| Cruz de fijación | 500 ms, cruz blanca, antes de cada estímulo |
 | Presentación del estímulo | Free-viewing (hasta respuesta del participante) |
 | ITI | 500 ms |
 | Feedback | Solo en fase de práctica |
@@ -73,7 +74,7 @@ flowchart TD
         B[instrucciones_practica]
         B --> LP
         subgraph LP[loop_practica × 12]
-            P[practica] --> FP[feedback_practica]
+            CP[cruz_practica] --> P[practica] --> FP[feedback_practica]
         end
         LP --> C[fin_practica]
     end
@@ -84,7 +85,7 @@ flowchart TD
         E[instrucciones_experimental]
         E --> LE
         subgraph LE[loop_experimental × 40]
-            EX[experimental] --> ITI[ITI]
+            CE[cruz_experimental] --> EX[experimental] --> ITI[ITI]
         end
     end
     subgraph SC[CIERRE]
@@ -102,10 +103,12 @@ flowchart TD
     style B  fill:#AFA9EC,stroke:#534AB7,color:#26215C
     style C  fill:#AFA9EC,stroke:#534AB7,color:#26215C
     style LP fill:#EEEDFE,stroke:#534AB7,color:#26215C
+    style CP fill:#AFA9EC,stroke:#534AB7,color:#26215C
     style P  fill:#AFA9EC,stroke:#534AB7,color:#26215C
     style FP fill:#AFA9EC,stroke:#534AB7,color:#26215C
     style E  fill:#5DCAA5,stroke:#0F6E56,color:#04342C
     style LE fill:#E1F5EE,stroke:#0F6E56,color:#04342C
+    style CE fill:#5DCAA5,stroke:#0F6E56,color:#04342C
     style EX fill:#5DCAA5,stroke:#0F6E56,color:#04342C
     style ITI fill:#5DCAA5,stroke:#0F6E56,color:#04342C
     style SB fill:#EBF3FA,stroke:#2E6DA4,color:#0D2E4A
