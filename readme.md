@@ -12,6 +12,14 @@ Materiales del Taller 1 del curso, centrado en el diseño e implementación de u
 
 > **Nota:** El archivo `.psyexp` será completado durante el taller. Al finalizar la semana se subirá la versión resuelta a este repositorio.
 
+### Secuencia de fase práctica
+
+![Secuencia de fase práctica](media/secuencia_practica.png)
+
+### Secuencia de fase experimental
+
+![Secuencia de fase experimental](media/secuencia_experimental.png)
+
 ---
 
 ## Cómo descargar los materiales
